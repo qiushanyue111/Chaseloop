@@ -16,12 +16,12 @@
 
 | Field                  | Details                                     |
 | ---------------------- | ------------------------------------------- |
-| **Team Name**          | Your Team Name                              |
-| **Team Domain**        | Domain 1 / Domain 2 *(choose one)*          |
-| **SDG Track (1–17)**   | e.g. SDG 11 — Sustainable Cities and Communities |
-| **Team Leader**        | Leader Name                                 |
-| **University**         | University Name(s)                          |
-| **Number of Members**  | e.g. 4                                      |
+| **Team Name**          | GO!GO!GO!                                   |
+| **Team Domain**        | Domain 2                                    |
+| **SDG Track (1–17)**   |  SDG 8 — Decent work and economic growth    |
+| **Team Leader**        | PENG YUERAN                                 |
+| **University**         | Xiamen University Malaysia                  |
+| **Number of Members**  | 5                                           |
 
 ## Links
 
