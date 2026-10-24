@@ -179,19 +179,30 @@ curl -X POST https://api.runpod.ai/v2/$RUNPOD_ENDPOINT_ID/runsync \
 
 - What challenges did you face, and how did you overcome them?
 - What did your team learn?
+The model kept inventing penalties. Our first drafts cited late-payment charges that were not in the contract. We did not "prompt harder" — we moved every number out of the model into decisions.py, and let the LLM only write sentences around figures it is handed. This single change is why the proposal claims auditable maths.
+WhatsApp template approval is a schedule risk. Meta reviews templates before they can be sent. We designed the loop so the channel is swappable (email fallback behind the same approval card) and the state machine never assumes a specific channel.
+Promises are buried in Manglish. "boleh bayar separuh bulan depan" is a promise with a date, not chatter. We hand-labelled replies from our 12 interviews and treat promise extraction as a first-class task, because a promise is what closes the gap between "reminded" and "paid".
+We had no Orbyte sandbox. So we simulated identity, RBAC and the activity log to the shape the hub describes, and kept the connector surface minimal (customer, invoice, task) — documented as an assumption rather than hidden.
+Cold starts lie to demos. A 20-second GPU wake-up looks like a broken product. Warm-up ping plus in-process fallback model fixed it.
 
 ## Future Improvements
 
-- [ ] Improvement 1
-- [ ] Improvement 2
+- [ ] Replace CSV import with connectors to Malaysian accounting tools (SQL Account, Bukku, Financio) so no one exports a spreadsheet at all.
+- [ ] Per-debtor promise-keeping score, shared across Orbyte tenants only with explicit consent.
+- [ ]Industry template library (renovation, events, printing) approved once per vertical to shorten WhatsApp review.
+- [ ] On-premise / BYO-key inference for SMEs that will not send contract text to any cloud.
+Team
+- [ ] Voice-note understanding — many owners and clients send audio, not text, and it is currently ignored.
 
 ## Team
 
 | Name        | Role                | GitHub                                   |
 | ----------- | ------------------- | ---------------------------------------- |
-| Member Name | Team Lead / Backend | [@username](https://github.com/username) |
-| Member Name | Frontend            | [@username](https://github.com/username) |
-| Member Name | AI / RunPod         | [@username](https://github.com/username) |
+| Member Name | Team Lead / Backend | https://github.com/qiushanyue111 |
+| Member Name | Frontend / Approval UX | https://github.com/yumubuzhixi |
+| Member Name | AI / RunPod         | https://github.com/ |
+|             | Data & Evaluation   |
+|             | Design & Documentation
 
 ---
 
