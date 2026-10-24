@@ -179,6 +179,7 @@ curl -X POST https://api.runpod.ai/v2/$RUNPOD_ENDPOINT_ID/runsync \
 
 - What challenges did you face, and how did you overcome them?
 - What did your team learn?
+
 The model kept inventing penalties. Our first drafts cited late-payment charges that were not in the contract. We did not "prompt harder" — we moved every number out of the model into decisions.py, and let the LLM only write sentences around figures it is handed. This single change is why the proposal claims auditable maths.
 WhatsApp template approval is a schedule risk. Meta reviews templates before they can be sent. We designed the loop so the channel is swappable (email fallback behind the same approval card) and the state machine never assumes a specific channel.
 Promises are buried in Manglish. "boleh bayar separuh bulan depan" is a promise with a date, not chatter. We hand-labelled replies from our 12 interviews and treat promise extraction as a first-class task, because a promise is what closes the gap between "reminded" and "paid".
@@ -201,7 +202,7 @@ Team
 | Peng Yueran | Team Lead / Backend | https://github.com/qiushanyue111 |
 | Xu Xilin    | Frontend / Approval UX | https://github.com/yumubuzhixi |
 | Li Zeshi    | AI                  | https://github.com/lizeshi-987star |
-| Li Jiahao   | Data & Evaluation   | https://github.com/
+| Li Jiahao   | Data & Evaluation   | https://github.com/cst2609048
 | Luo Yue     | Design & Documentation | https://github.com/
 
 ---
