@@ -198,11 +198,11 @@ Team
 
 | Name        | Role                | GitHub                                   |
 | ----------- | ------------------- | ---------------------------------------- |
-| Member Name | Team Lead / Backend | https://github.com/qiushanyue111 |
-| Member Name | Frontend / Approval UX | https://github.com/yumubuzhixi |
-| Member Name | AI / RunPod         | https://github.com/ |
-|             | Data & Evaluation   |
-|             | Design & Documentation
+| Peng Yueran | Team Lead / Backend | https://github.com/qiushanyue111 |
+| Xu Xilin    | Frontend / Approval UX | https://github.com/yumubuzhixi |
+| Li Zeshi    | AI                  | https://github.com/lizeshi-987star |
+| Li Jiahao   | Data & Evaluation   | https://github.com/
+| Luo Yue     | Design & Documentation | https://github.com/
 
 ---
 
