@@ -28,9 +28,8 @@
 | Resource          | Link                                           |
 | ----------------- | ---------------------------------------------- |
 | GitHub Repository | https://github.com/your-username/your-project  |
-| Replit Project    | https://replit.com/@your-username/your-project |
-| Live Demo         | https://your-project.replit.app                |
-| RunPod Endpoint   | https://api.runpod.ai/v2/your-endpoint-id      |
+| Replit Project    | https://9831efda-e953-4268-92a1-62dea10ab54e-00-eknsbighg0r1.pike.replit.dev/dashboard |
+| Live Demo         | https://drive.google.com/file/d/1Bd4erCIiXz1h7iYf-Tpzq7MfT_gkqsSV/view?usp=sharing                |
 | Slide Deck        | https://drive.google.com/file/d/14pGaXk3Qf0IhDcVcQt6kFbB30qT8E48q/view?usp=sharing                     |
 | Demo Video        | https://example.com/demo-video                 |
 
@@ -93,15 +92,7 @@ Two lines stay firm. No arithmetic is done by the model: dates, overdue days, pe
 
 ### Architecture
 
-WhatsApp (client) ──► Meta Cloud API ──► Replit (FastAPI app + agent worker)
-      ▲                                          │            │
-      │                                          │            └──► Replit Postgres (Neon + pgvector)
-      │                                          │                  cases · promises · activity_log
-      └──────────── approval card ◄──────────────┤
-                                                 └──► RunPod Serverless (GPU)
-                                                      drafting · reply parsing · OCR fields
 
-Owner (WhatsApp) ──► approval card ──► "send" ──► outbound message ──► activity_log
 
 ---
 
@@ -158,6 +149,7 @@ Describe how your team used Replit. For example:
 
 Describe how your team used RunPod. For example:
 
+We haven't used RunPod.
 - **Workload:** Model inference (e.g. text generation, image processing) runs on a RunPod GPU.
 - **Setup:** `runpod/handler.py` is deployed as a **RunPod Serverless Endpoint**.
 - **Integration:** The Replit app sends requests to the endpoint using `RUNPOD_API_KEY` and `RUNPOD_ENDPOINT_ID`.
