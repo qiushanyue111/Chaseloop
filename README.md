@@ -91,7 +91,83 @@ Two lines stay firm. No arithmetic is done by the model: dates, overdue days, pe
 
 
 ### Architecture
+TAILPAY / PROJECT DEVELOPMENT                                  01 / 03
 
+From idea to working prototype
+Development journey reconstructed from project discussions.
+Phases are grouped for clarity, not presented as a dated engineering log.
+
+╔════════════════════════════════════════════════════════════════════╗
+║ START                                                              ║
+║ From an unpaid balance to a demonstrable prototype                 ║
+╚══════════════════════════════════╦═════════════════════════════════╝
+                                   ▼
+
+┌─ 01  Identify the problem ─────────────────────────────── ref A+B ─┐
+│ Finished work has been delivered, but final balances remain        │
+│ unpaid. Owners repeatedly text or call customers.                  │
+└──────────────────────────────────┬─────────────────────────────────┘
+
+                                   │
+                                   │
+                                   ▼
+
+┌─ 02  Choose users and use cases ───────────────────────────────────┐
+│ Start with Malaysian micro-SME event services and custom-order     │
+│ businesses. Owners and assigned staff use the workspace.           │
+└──────────────────────────────────┬─────────────────────────────────┘
+
+                                   │
+                                   │
+                                   ▼
+
+┌─ 03  Agree the MVP scope ──────────────────────────────── ref A+B ─┐
+│ Manual bill entry first. CSV import second. Add a bill when its    │
+│ final amount and due date are known.                               │
+└──────────────────────────────────┬─────────────────────────────────┘
+
+                                   │
+                                   │ 
+                                   ▼
+
+┌─ 04  Build the first working version ────────────────────── ref C ─┐
+│ Create the web UI, API, database, sign-in and workspace            │
+│ permissions. Track bills, balances, payments and reminders.        │
+└──────────────────────────────────┬─────────────────────────────────┘
+
+                                   │
+                                   │
+                                   ▼
+
+┌─ 05  Review with the project team ─────────────────────────────────┐
+│ Try the workflow, identify manual effort and missing actions, then │
+│ revise sending, replies, preview access and bill cleanup.          │
+└──────────────────────────────────┬─────────────────────────────────┘
+
+                                   │
+                                   │
+                                   ▼
+
+┌─ 06  Verify the changed behavior ────────────────────────── ref C ─┐
+│ Check types/builds and relevant APIs. Test roles, retained payment │
+│ data and critical owner/customer actions.                          │
+└──────────────────────────────────┬─────────────────────────────────┘
+
+                                   │
+                                   │  
+                                   ▼
+
+┌─ 07  Deliver the current prototype ──────────────────────── ref D ─┐
+│ Use the existing preview to demonstrate bills, simulated           │
+│ reminders, customer replies, owner review and safe                 │
+│ deletion/archive.                                                  │
+└────────────────────────────────────────────────────────────────────┘
+                                   ↳ 只在预览中演示，不对外发布
+
+MAJOR REVISIONS: PAGE 2
+REPEATABLE CHANGE LOOP: PAGE 3
+
+Scope: development process from initial need to the current project output.      TAILPAY | 1
 
 
 ---
