@@ -31,7 +31,7 @@
 | Replit Project    | https://replit.com/@your-username/your-project |
 | Live Demo         | https://your-project.replit.app                |
 | RunPod Endpoint   | https://api.runpod.ai/v2/your-endpoint-id      |
-| Slide Deck        | https://example.com/slides                     |
+| Slide Deck        | https://drive.google.com/file/d/14pGaXk3Qf0IhDcVcQt6kFbB30qT8E48q/view?usp=sharing                     |
 | Demo Video        | https://example.com/demo-video                 |
 
 ---
