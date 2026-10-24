@@ -40,18 +40,21 @@
 
 ### Problem
 
-Describe the real-world problem you are solving in 2–4 sentences. Who is affected, and why does it matter?
-
+A Malaysian micro-SME finishes a job and then waits for the last 20–30% of the contract — the tail payment. The client already has the goods, the deposit is spent, and the owner's leverage is gone. Malaysian SMEs pay trade debts an average of 64 days late (Experian Malaysia, State of Credit 2025), and the tail lands last, exactly when cash is thinnest: the same ringgit is needed for the next job's materials and wages. In our 12 owner interviews, 8 of 12 chase final invoices personally on WhatsApp, 41% of tail invoices sat more than 30 days overdue, and owners spent a median of 9 hours a week chasing — mostly after 8pm.
 ### Solution
 
-Explain how your project uses AI to solve the problem and what makes it valuable.
+ChaseLoop runs one complete loop, not one message: an invoice crosses its due date (trigger), the agent assembles everything it knows about that client from the ledger, the chat history and the signed contract (connected data), a deterministic state machine and a penalty calculator decide what should happen today while an LLM writes the message in the client's own language (decision), the owner approves it from a card on his own phone (human approval), and the outcome — sent, promised, paid, disputed — is written to an append-only log that closes the case (visible outcome).
+
+Two lines stay firm. No arithmetic is done by the model: dates, overdue days, penalty amounts and instalment splits come from a deterministic calculator that reads the contract, so every figure on screen traces to a clause. No consequential message leaves without a human tap: above a ringgit threshold, for any discount, and for any legal escalation, the send waits for approval.
 
 ### Key Features
 
-- **Feature 1** — Short description.
-- **Feature 2** — Short description.
-- **Feature 3** — Short description.
-
+- **Feature 1** — Trigger engine — an invoice is opened when its due date passes, or when a promise-to-pay date goes by without payment. Nothing is sent on a blind schedule.
+- **Feature 2** — Case file builder — Excel/CSV ledger, WhatsApp and email thread history, and quotation PDFs are merged into one case file per invoice: amount, client, due date, terms, payment behaviour, dispute signals.
+- **Feature 3** — Deterministic decision core — the state machine due → reminded → promised → escalated → settled plus a term-and-penalty calculator set every date and every ringgit. The LLM writes prose; it never computes money.
+- **Feature 4** — Approval card on WhatsApp — "Chase Sdn Bhd, RM 4,380, 41 days late — send?" arrives on the owner's phone; one reply approves, edits or skips. No dashboard to log into at 9pm.
+- **Feature 5** — Reply understanding — code-switched, typo-ridden replies (English / Bahasa Malaysia / Mandarin / Manglish) are parsed into a promise-to-pay (amount + date), a dispute, or a part-payment, and the next action is scheduled automatically.
+- **Feature 5** — Reconciler and audit log — bank transfers are matched back to invoices, the case closes itself, and every touch, draft, approval and outcome is appended to an activity log that exports to the Orbyte hub.
 ### Tech Stack
 
 | Layer         | Technology                   |
@@ -91,11 +94,15 @@ Explain how your project uses AI to solve the problem and what makes it valuable
 
 ### Architecture
 
-```
-User ──► Replit (App / API) ──► RunPod Endpoint (GPU model)
-                │
-                └──► Response returned to user
-```
+WhatsApp (client) ──► Meta Cloud API ──► Replit (FastAPI app + agent worker)
+      ▲                                          │            │
+      │                                          │            └──► Replit Postgres (Neon + pgvector)
+      │                                          │                  cases · promises · activity_log
+      └──────────── approval card ◄──────────────┤
+                                                 └──► RunPod Serverless (GPU)
+                                                      drafting · reply parsing · OCR fields
+
+Owner (WhatsApp) ──► approval card ──► "send" ──► outbound message ──► activity_log
 
 ---
 
