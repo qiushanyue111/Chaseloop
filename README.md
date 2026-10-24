@@ -31,7 +31,7 @@
 | Replit Project    | https://9831efda-e953-4268-92a1-62dea10ab54e-00-eknsbighg0r1.pike.replit.dev/dashboard |
 | Live Demo         | https://drive.google.com/file/d/1Bd4erCIiXz1h7iYf-Tpzq7MfT_gkqsSV/view?usp=sharing                |
 | Slide Deck        | https://drive.google.com/file/d/14pGaXk3Qf0IhDcVcQt6kFbB30qT8E48q/view?usp=sharing                     |
-| Demo Video        | https://example.com/demo-video                 |
+| Demo Video        | https://youtu.be/s_TaRmwjVHE?si=rYzpxQQ86vm8T4C2              |
 
 ---
 
@@ -56,13 +56,13 @@ Two lines stay firm. No arithmetic is done by the model: dates, overdue days, pe
 - **Feature 5** — Reconciler and audit log — bank transfers are matched back to invoices, the case closes itself, and every touch, draft, approval and outcome is appended to an activity log that exports to the Orbyte hub.
 ### Tech Stack
 
-| Layer         | Technology                   |
-| ------------- | ---------------------------- |
-| Frontend      | e.g. HTML, React             |
-| Backend       | e.g. Python, Flask / FastAPI |
-| Database      | e.g. PostgreSQL, SQLite      |
-| AI / Compute  |                |
-| Hosting / Dev | Replit                       |
+| Layer         | Technology                                                                                  |
+| ------------- | ------------------------------------------------------------------------------------------- |
+| Frontend      | Jinja2 templates + HTMX, server-rendered owner dashboard                                    |
+| Backend       | Python 3.12, FastAPI, APScheduler (D-1 + every-3-day sweep); WhatsApp Cloud API for reminders |
+| Database      | Replit PostgreSQL (Neon) for ledger and message log; SQLite for tests                       |
+| AI / Compute  | DeepSeek API (deepseek-chat) — drafting EN/BM/ZH, reply-intent classification, screenshot fields |
+| Hosting / Dev | Replit (Repl today → Deployments before judging) + Replit Secrets; GitHub                   |
 
 ---
 
