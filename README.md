@@ -69,7 +69,6 @@ Two lines stay firm. No arithmetic is done by the model: dates, overdue days, pe
 
 ## Project Structure
 
-```
 .
 ├── docs/                    # Screenshots, diagrams
 ├── runpod/
@@ -90,7 +89,7 @@ Two lines stay firm. No arithmetic is done by the model: dates, overdue days, pe
 ├── LICENSE
 ├── requirements.txt         # Python dependencies
 └── README.md
-```
+
 
 ### Architecture
 
