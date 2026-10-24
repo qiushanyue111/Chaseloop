@@ -62,7 +62,7 @@ Two lines stay firm. No arithmetic is done by the model: dates, overdue days, pe
 | Frontend      | e.g. HTML, React             |
 | Backend       | e.g. Python, Flask / FastAPI |
 | Database      | e.g. PostgreSQL, SQLite      |
-| AI / Compute  | RunPod (GPU)                 |
+| AI / Compute  |                |
 | Hosting / Dev | Replit                       |
 
 ---
@@ -190,7 +190,7 @@ Cold starts lie to demos. A 20-second GPU wake-up looks like a broken product. W
 
 - [ ] Replace CSV import with connectors to Malaysian accounting tools (SQL Account, Bukku, Financio) so no one exports a spreadsheet at all.
 - [ ] Per-debtor promise-keeping score, shared across Orbyte tenants only with explicit consent.
-- [ ]Industry template library (renovation, events, printing) approved once per vertical to shorten WhatsApp review.
+- [ ] Industry template library (renovation, events, printing) approved once per vertical to shorten WhatsApp review.
 - [ ] On-premise / BYO-key inference for SMEs that will not send contract text to any cloud.
 Team
 - [ ] Voice-note understanding — many owners and clients send audio, not text, and it is currently ignored.
@@ -202,8 +202,8 @@ Team
 | Peng Yueran | Team Lead / Backend | https://github.com/qiushanyue111 |
 | Xu Xilin    | Frontend / Approval UX | https://github.com/yumubuzhixi |
 | Li Zeshi    | AI                  | https://github.com/lizeshi-987star |
-| Li Jiahao   | Data & Evaluation   | https://github.com/cst2609048
-| Luo Yue     | Design & Documentation | https://github.com/
+| Li Jiahao   | Data & Evaluation   | https://github.com/cst2609048 |
+| Luo Yue     | Design & Documentation | https://github.com/Loyo20040925 |
 
 ---
 
